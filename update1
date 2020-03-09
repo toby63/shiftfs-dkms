@@ -1,0 +1,71 @@
+#!/bin/sh
+#update script for shiftfs.c
+
+#functions:
+
+normal_backup () {
+    #rename and move old shiftfs.c
+    mv shiftfs.c backup/shiftfs.c.old
+    #download new shiftfs.c
+    wget https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/focal/plain/fs/shiftfs.c   
+    echo ' '
+    echo 'Updated shiftfs.c'
+    echo 'Moved old shiftfs.c into folder "backup".'
+}
+
+#check for existing backup and rename
+check_backup2 () {
+if [ -e 'backup/shiftfs.c.old' ]; then
+     mv backup/shiftfs.c.old backup/shiftfs.c.old2    
+     normal_backup
+else
+  normal_backup
+fi
+}
+
+answer_delete () {
+if [ $answ1 = yes ]; then
+   rm backup/shiftfs.c.old2  
+   check_backup2
+     elif [ $answ1 = no ]; then
+     echo 'Please rename, move or delete shiftfs.c.old2 in folder "backup".'
+else 
+  echo 'Wrong answer. Retry.'
+  check_backup1
+fi
+}
+
+#check for older backup and ask for deletion
+check_backup1 () {
+ if [ -e 'backup/shiftfs.c.old2' ]; then
+   read -p "Delete 'shiftfs.c.old2'? Answer with 'yes' or 'no':" answ1
+   answer_delete
+ else
+ check_backup2
+fi 
+}
+
+#####
+#Start of script
+#read username
+USERNAME=$(whoami)
+
+#check if run as root
+if [ $USERNAME = root ]; then
+echo "Don't run this as root!" 
+#check for existing folder backup
+  elif [ -d backup ]; then
+  check_backup1   
+else
+#create folder for backup
+mkdir backup
+#call normal_backup
+normal_backup
+exit
+fi
+
+
+      
+
+
+
