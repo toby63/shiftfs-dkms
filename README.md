@@ -1,107 +1,55 @@
 
-# shiftfs-dkms
+# shiftfs-dkms version for Kernel 5.11+
 
 Content:
 --------
 * [About](#about)
 * [Limitations](#limitations)
 * [Status](#status)
-* [Changelog](#changelog)
 * [Howto](#howto)
     * [Install](#install)
     * [Uninstall/Remove](#uninstallremove)
     * [Upgrade](#upgrade)
-* [Usecases](#usecases)
 * [Bugreports](#reporting-bugs)
 * [Credits](#credits)
 * [Copyright](#copyrightlicense)
 
 
-About:
-------
+## About
 
-This repo provides scripts to install the (linux-)kernel module **shiftfs** via dkms.   
+**Note:** This version is only compatible with Linux Kernel version 5.11 and newer.
 
-_Note: shiftfs will maybe be included in the mainline kernel in the future.   
-At this point (to my knowledge) only ubuntu included it in their kernel (see also: [check whether shiftfs is already included](#0-check-whether-your-kernel-already-includes-shiftfs))._
+The **shiftfs.c** file is from the Ubuntu Hirsute kernel repo, see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/hirsute/tree/fs/shiftfs.c?h=master-next)
 
-#### Overview of Branches/Versions:
+For an overview and more information see [README.md in master branch](https://github.com/toby63/shiftfs-dkms/README.md).
 
-| Branch/Version: | Kernel(version):  | Link: | Description: |
-| --- | --- | --- | --- |
-| master | <=5.7 | https://github.com/toby63/shiftfs-dkms/  | Contains the shiftfs.c file from the Ubuntu Focal kernel (5.4) repo, compatible for everything <=5.7 |
-| kernel-v5.8 | >5.8 | https://github.com/toby63/shiftfs-dkms/tree/kernel-v5.8 | Contains the shiftfs.c file from the Ubuntu Groovy kernel (5.8) repo | 
-| Arch Linux Package | >5.8 | https://aur.archlinux.org/packages/?O=0&K=shiftfs | Arch Linux Package on AUR. |
+## Limitations
 
-#### About shiftfs:
+See: [README.md in master branch](https://github.com/toby63/shiftfs-dkms/README.md#limitations)
 
-shiftfs is a kernel filesystem for the linux kernel.   
-It provides easier uid/gid-shifting for containers and can be used for example with [LXD](https://linuxcontainers.org/lxd/) (see also: [Usecases](#usecases)).
+## Status
 
-shiftfs was made by:   
-See [Credits](#credits).
+| Last Update: |
+| --- |
+| March 2021 |
 
-* Further information on shiftfs:
-https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155
+**Note:** This branch is partly untested for now.
+The module itself works (the AUR package is tested), but the script installation method was not tested yet.
 
-* The shiftfs.c file included is from the Ubuntu Kernel repo:
-https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/focal/tree/fs/shiftfs.c
-
- 
-Limitations:
----------------
-
-* **This branch (master) is not compatible with Linux Kernel(s) 5.8+:**   
-See branch https://github.com/toby63/shiftfs-dkms/tree/kernel-v5.8 instead.
-
-* **Regarding Overlayfs inside container:**   
-shiftfs can prevent the use of overlayfs **inside a container**.      
-A usecase for this is running Docker with the overlayfs-storage driver **inside a lxd container**.   
-A Kernelpatch that solves this is available, but it's not included in the mainline kernel (yet).      
-To my knowledge only Ubuntu included it (see [solved bug report](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1846272)).      
-
-  For **workarounds and more information** see:   
-[Issue 2 of this repo](https://github.com/toby63/shiftfs-dkms/issues/2#issuecomment-614688392) 
-
-
-* More Issues may be found in the [Ubuntu Kernel Bug Tracker](https://bugs.launchpad.net/ubuntu/+source/linux?field.searchtext=shiftfs&search=Search&field.status%3Alist=NEW&field.status%3Alist=INCOMPLETE_WITH_RESPONSE&field.status%3Alist=INCOMPLETE_WITHOUT_RESPONSE&field.status%3Alist=CONFIRMED&field.status%3Alist=TRIAGED&field.status%3Alist=INPROGRESS&field.status%3Alist=FIXCOMMITTED&field.assignee=&field.bug_reporter=&field.omit_dupes=on&field.has_patch=&field.has_no_package=).
-
-Status:
--------
-
-**Note:** The Status applies only for this branch.
-
-Repo: | 
-------- |
-active | 
-
-Working Versions:| 
----------------- | 
-master | 
-
-**Testreports:**   
-
-Version: | OS:            | Kernelversion: | Status:    | Date of last test: |
----      | ---            | ---        | ---    | --- |
-master   | Arch Linux | 5.7.12-arch1-1 | Runs/Works | 15.08.2020 |
-
+| Version: | Status: |
+| --- | --- | 
+| k511-1 | recent |
 
 If you want to post a testreport, take a look at: [Testreports Issue on Github](https://github.com/toby63/shiftfs-dkms/issues/3).
 
-### Changelog:
-
-See: [CHANGELOG](CHANGELOG)
-
-
-Howto:
-------
+## Howto
 
 ### Install:
 
 #### Requirements:
- * (Recommended) Recent Linux Kernel (>5.0)
+ * Required Linux Kernel version (see above)
  * dkms
- * kernel-headers (e.g. debian package (for 64-bit): linux-headers-amd64)
+ * kernel-headers (e.g. Debian package (for 64-bit): linux-headers-amd64)
 
 #### 0. Check whether your kernel already includes shiftfs:
 
@@ -111,7 +59,7 @@ Howto:
   
  With git:
 
-      # git clone https://github.com/toby63/shiftfs-dkms.git shiftfs-dkms
+      # git clone -b k5.11 https://github.com/toby63/shiftfs-dkms.git shiftfs-k511
 
 
 #### 2. (Optional, but recommended) Update shiftfs.c:
@@ -149,7 +97,7 @@ Howto:
 
  * (Optional) Update these scripts:
    
-   _Note: See [Changelog](https://github.com/toby63/shiftfs-dkms/blob/master/CHANGELOG) whether an update is necessary._
+   _Note: Check the GitHub repo whether an update is necessary._
    
    Run as user (inside the scripts folder):
        
@@ -158,24 +106,13 @@ Howto:
  * Repeat Step 2. and 3.
 
 
-Usecases:
----------
-
-* LXD:
-
-  How to use shiftfs with LXD is described in [my wiki](https://github.com/toby63/shiftfs-dkms/wiki/Use-shiftfs-in-LXD)     
-  and in the official Forum of LXD: [Usecases for shiftfs](https://discuss.linuxcontainers.org/t/lxd-usecases-of-shiftfs-volume-disk-share/7735) and [Trying out shiftfs](https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155).
-
-
-Reporting bugs:
----------------
+## Reporting bugs
 
  Report bugs here:
  https://github.com/toby63/shiftfs-dkms/issues
 
 
-Credits:
---------
+## Credits
 
 * shiftfs was made by:
    * James Bottomley
@@ -196,8 +133,7 @@ Credits:
   for the helpful advice.
 
 
-Copyright/License:
-------------------
+## Copyright/License
 
 General Public License, Version 2
 
