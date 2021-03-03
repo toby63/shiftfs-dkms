@@ -6,7 +6,6 @@
 * [About](#about)
 * [Limitations](#limitations)
 * [Status](#status)
-* [Changelog](#changelog)
 * [Usecases](#usecases)
 * [Bugreports](#reporting-bugs)
 * [Credits](#credits)
@@ -37,33 +36,17 @@ https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155
 There are different versions of shiftfs.c for different kernel versions, so I cover a few of them:
 
 | Branch/Version: | For Kernel(version): | Description: |
-| --- | --- | --- | 
+| --- | --- | --- |
 | [k5.11](https://github.com/toby63/shiftfs-dkms/tree/k5.11) | >=5.11 (5.11 and newer) | - |
 | [k5.8](https://github.com/toby63/shiftfs-dkms/tree/k5.8) | >=5.8 & <5.11 (5.8 and newer, but older than 5.11) | - |
-| [k5.4](https://github.com/toby63/shiftfs-dkms/tree/k5.4) | <=5.4 & <5.8 (5.4 and newer, but older than 5.8) | - |
+| [k5.4](https://github.com/toby63/shiftfs-dkms/tree/k5.4) | >=5.4 & <5.8 (5.4 and newer, but older than 5.8) | - |
 | [Arch Linux Package in AUR](https://aur.archlinux.org/packages/?O=0&K=shiftfs) | >=5.11 (5.11 and newer) | Same version as k5.11 |
 
 #### What about older versions?
 
-I don't provide more versions, but you can try:
-
-- to use the version of `k5.4` on an older kernel (it might work; untested)
-- to replace the shiftfs.c file with a file from an older Ubuntu release
-
-**Note: Use at your own risk.**
-
-##### Replace shiftfs.c file for an older kernel
-
-For example you can download the shiftfs.c file from the Ubuntu  Kernel repo.
-Replace the word "hirsute" with an older [Ubuntu Codename](https://wiki.ubuntu.com/Releases) (see the [Ubuntu kernel package page](https://packages.ubuntu.com/focal/linux-generic) for details on versions used) in the following lauchpad link:
-https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/hirsute/tree/fs/shiftfs.c
-
-Download the plain version, for example with wget:
-
-    wget https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/hirsute/plain/fs/shiftfs.c
-
-Then follow the instructions in the [Howto in branch k5.8](https://github.com/toby63/shiftfs-dkms/tree/k5.8#howto): Skip step 2 and (re)place the downloaded shiftfs.c in the folder.
-Continue with step 3.
+shiftfs will most likely not work on kernels older than version 5.
+Thus the only recent branch newer than 5 is 5.4.
+See also [kernel.org](https://www.kernel.org/).
 
 
 ## Limitations
@@ -82,9 +65,9 @@ To my knowledge only Ubuntu included it (see [solved bug report](https://bugs.la
 
 ## Status
 
-Project/Repo: | 
-------- |
-active | 
+my Project/Repo: | Upstream development: |
+--- | --- |
+active | active |
 
 If you want to post a testreport, take a look at: [Testreports Issue on Github](https://github.com/toby63/shiftfs-dkms/issues/3).
 
