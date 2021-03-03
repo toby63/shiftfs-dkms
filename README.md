@@ -1,5 +1,5 @@
 
-# shiftfs-dkms version for Kernel 5.11+
+# shiftfs-dkms version for Kernel 5.8+
 
 Content:
 --------
@@ -17,9 +17,12 @@ Content:
 
 ## About
 
-**Note:** This version is only compatible with Linux Kernel version 5.11 and newer.
+**Note:** 
 
-The **shiftfs.c** file is from the Ubuntu Hirsute kernel repo, see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/hirsute/tree/fs/shiftfs.c?h=master-next)
+- This version is only compatible with Linux Kernel version >=5.8 and <5.11 (5.8 and newer, but older than 5.11).
+- This version is not tested by me anymore.
+
+The **shiftfs.c** file is from the Ubuntu Groovy kernel repo, see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/groovy/tree/fs/shiftfs.c)
 
 For an overview and more information see [README.md in master branch](https://github.com/toby63/shiftfs-dkms/README.md).
 
@@ -29,12 +32,13 @@ See: [README.md in master branch](https://github.com/toby63/shiftfs-dkms/README.
 
 ## Status
 
-_Note:_ This branch is partly untested for now.
-The module itself works (the AUR package is tested), but the script installation method was not tested yet.
+| Last Updated: |
+| --- |
+| March 2021 |
 
 | Version: | Status: |
 | --- | --- | 
-| k5.11-1 | recent, working |
+| k58-1 | recent | 
 
 If you want to post a testreport, take a look at: [Testreports Issue on Github](https://github.com/toby63/shiftfs-dkms/issues/3).
 
@@ -55,7 +59,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
   
  With git:
 
-      # git clone -b k5.11 https://github.com/toby63/shiftfs-dkms.git shiftfs-k511
+      # git clone -b k5.8 https://github.com/toby63/shiftfs-dkms.git shiftfs-k58
 
 
 #### 2. (Optional, but recommended) Update shiftfs.c:
