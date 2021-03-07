@@ -21,11 +21,11 @@ Content:
 
 The **shiftfs.c** file is from the Ubuntu Hirsute kernel repo, see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/hirsute/tree/fs/shiftfs.c?h=master-next)
 
-For an overview and more information see [README.md in master branch](https://github.com/toby63/shiftfs-dkms/README.md).
+For an overview and more information see [README.md in master branch](https://github.com/toby63/shiftfs-dkms/blob/master/README.md).
 
 ## Limitations
 
-See: [README.md in master branch](https://github.com/toby63/shiftfs-dkms/README.md#limitations)
+See: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitations)
 
 ## Status
 
