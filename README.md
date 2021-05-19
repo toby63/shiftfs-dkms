@@ -15,10 +15,7 @@
 
 ## About
 
-This repo provides scripts to install the (linux-)kernel module **shiftfs** via dkms.   
-
-_Note: shiftfs will maybe be included in the mainline kernel in the future.   
-At this point (to my knowledge) only ubuntu included it in their kernel._
+This repo provides scripts to install the (Linux-)kernel module **shiftfs** via dkms.   
 
 ### About shiftfs
 
@@ -26,21 +23,35 @@ shiftfs is a kernel filesystem for the linux kernel.
 It provides easier uid/gid-shifting for containers and can be used for example with [LXD](https://linuxcontainers.org/lxd/) (see also: [Usecases](#usecases)).
 
 shiftfs was made by:   
-See [Credits](#credits).
+See [Credits](#credits)
 
 * Further information on shiftfs:
 https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155
+
+### News
+
+The official successor for shiftfs will be available soon.   
+
+According to the LXD developers, this new approach is natively included in the linux kernel (kernel versions 5.12 and newer) (so no need for dkms-modules) and the transition will be seamless.   
+I assume this new approach will be implemented in LXD in a new version in the near future.   
+
+shiftfs will still be supported for older kernels until approximately April 2022 ([Source](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/12)).   
+
+For more information see:
+
+- [Official LXD forum - Comment](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/2)
+- [LXD Pull Request](https://github.com/lxc/lxd/pull/8778)
 
 ### Overview of Branches/Versions
 
 There are different versions of shiftfs.c for different kernel versions, so I cover a few of them:
 
-| Branch/Version: | For Kernel(version): | Description: |
+| Branch/Version: | For Kernel(version): | Further Notes: |
 | --- | --- | --- |
-| [k5.11](https://github.com/toby63/shiftfs-dkms/tree/k5.11) | >=5.11 (5.11 and newer) | - |
+| [k5.11](https://github.com/toby63/shiftfs-dkms/tree/k5.11) | 5.11 branch | Incompatible with 5.12 and newer (see [Bug Report](https://github.com/toby63/shiftfs-dkms/issues/8) for details) |
 | [k5.8](https://github.com/toby63/shiftfs-dkms/tree/k5.8) | >=5.8 & <5.11 (5.8 and newer, but older than 5.11) | - |
 | [k5.4](https://github.com/toby63/shiftfs-dkms/tree/k5.4) | >=5.4 & <5.8 (5.4 and newer, but older than 5.8) | - |
-| [Arch Linux Package in AUR](https://aur.archlinux.org/packages/?O=0&K=shiftfs) | >=5.11 (5.11 and newer) | Same version as k5.11 |
+| [Arch Linux Packages in AUR](https://aur.archlinux.org/packages/?O=0&K=shiftfs) | for linux-lts (>=5.8) and 5.11 | Incompatible with 5.12 and newer (see [Bug Report](https://github.com/toby63/shiftfs-dkms/issues/8) for details) |
 
 #### What about older versions?
 
