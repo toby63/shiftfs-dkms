@@ -34,11 +34,11 @@ See: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitat
 
 | Last Updated: |
 | --- |
-| March 2021 |
+| July 2021 |
 
 | Version: | Status: |
 | --- | --- | 
-| k58-1 | recent | 
+| k58-1 | working | 
 
 If you want to post a testreport, take a look at: [Testreports Issue on Github](https://github.com/toby63/shiftfs-dkms/issues/3).
 
@@ -64,7 +64,8 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 
 #### 2. (Optional, but recommended) Update shiftfs.c:
 
- The shiftfs.c included might be outdated, thus the update-script.
+ The shiftfs.c included might be outdated, thus the update-script.   
+ You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/groovy/log/fs/shiftfs.c) whether an update is available.
 
  Run as user:
 
