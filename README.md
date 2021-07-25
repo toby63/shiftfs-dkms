@@ -30,16 +30,22 @@ https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155
 
 ### News
 
-The official successor for shiftfs will be available soon.   
+The official successor for shiftfs is now (partly) available.   
+The original shiftfs will still be available for kernel versions 5.10 and 5.4.   
+**Note:** The original shiftfs might also have intermediate support for kernel version 5.13, see [Issue 9](https://github.com/toby63/shiftfs-dkms/issues/9) for details.
 
-According to the LXD developers, this new approach is natively included in the linux kernel (kernel versions 5.12 and newer) (so no need for dkms-modules) and the transition will be seamless.   
-I assume this new approach will be implemented in LXD in a new version in the near future.   
+According to the LXD developers, the new approach is natively included in the linux kernel (in kernel versions **5.12** and newer) - so no need for dkms-modules in the future.    
+Support for the new approach is implemented since LXD version **4.16**, and the transition will be seamless, so LXD will automatically switch to the new approach, if available.   
+**Note:** For now there are some limitations though, as only ext4, xfs and vfat are supported as underlying filesystems for containers and volumes.
+See [Comment 2](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/13) for details.   
 
-shiftfs will still be supported for older kernels until approximately April 2022 ([Source](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/12)).   
+The original shiftfs will still be supported for older kernels until approximately April 2022 ([Source](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/12)).   
 
 For more information see:
 
-- [Official LXD forum - Comment](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/2)
+- Official LXD forum:
+    - [Comment 1](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/2)
+    - [Comment 2](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/13)
 - [LXD Pull Request](https://github.com/lxc/lxd/pull/8778)
 
 ### Overview of Branches/Versions
