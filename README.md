@@ -30,16 +30,16 @@ https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155
 
 ### News
 
-The official successor for shiftfs is now (partly) available.   
-The original shiftfs will still be available for kernel versions 5.10 and 5.4.   
-**Note:** The original shiftfs might also have intermediate support for kernel version 5.13, see [Issue 9](https://github.com/toby63/shiftfs-dkms/issues/9) for details.
+The official successor for shiftfs is now available.   
+The original shiftfs will still be available for kernel versions **5.10** and **5.4** and supported until approximately April 2022 ([Source](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/12)).   
+Kernel version **5.13** will have intermediate support as well.   
+See **Overview of Branches/Versions** below for more information.   
 
 According to the LXD developers, the new approach is natively included in the linux kernel (in kernel versions **5.12** and newer) - so no need for dkms-modules in the future.    
 Support for the new approach is implemented since LXD version **4.16**, and the transition will be seamless, so LXD will automatically switch to the new approach, if available.   
 **Note:** For now there are some limitations though, as only ext4, xfs and vfat are supported as underlying filesystems for containers and volumes.
 See [Comment 2](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/13) for details.   
-
-The original shiftfs will still be supported for older kernels until approximately April 2022 ([Source](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/12)).   
+So if you use other filesystems, I recommend to use the original shiftfs for now, until it is fixed.   
 
 For more information see:
 
@@ -54,10 +54,14 @@ There are different versions of shiftfs.c for different kernel versions, so I co
 
 | Branch/Version: | For Kernel(version): | Further Notes: |
 | --- | --- | --- |
-| [k5.11](https://github.com/toby63/shiftfs-dkms/tree/k5.11) | 5.11 branch | Incompatible with 5.12 and newer (see [Bug Report](https://github.com/toby63/shiftfs-dkms/issues/8) for details) |
-| [k5.8](https://github.com/toby63/shiftfs-dkms/tree/k5.8) | >=5.8 & <5.11 (5.8 and newer, but older than 5.11) | - |
-| [k5.4](https://github.com/toby63/shiftfs-dkms/tree/k5.4) | >=5.4 & <5.8 (5.4 and newer, but older than 5.8) | - |
-| [Arch Linux Packages in AUR](https://aur.archlinux.org/packages/?O=0&K=shiftfs) | for linux-lts (>=5.8) and 5.11 | Incompatible with 5.12 and newer (see [Bug Report](https://github.com/toby63/shiftfs-dkms/issues/8) for details) |
+| [k5.13](https://github.com/toby63/shiftfs-dkms/tree/k5.13) | 5.13 branch | - |
+| [k5.8](https://github.com/toby63/shiftfs-dkms/tree/k5.8) | 5.10 branch (longterm version); also compatible with >=5.8 & <5.11 (5.8 and newer, but older than 5.11) | - |
+| [k5.4](https://github.com/toby63/shiftfs-dkms/tree/k5.4) | 5.4 branch (longterm version), also compatible with >=5.4 & <5.8 (5.4 and newer, but older than 5.8) | - |
+| [Arch Linux Packages in AUR](https://aur.archlinux.org/packages/?O=0&K=shiftfs) | for linux (5.13) and linux-lts (5.10) | - |
+
+| Deprecated Branches: | For Kernel(version): |  Further Notes: |
+| --- | --- | --- |
+| [k5.11](https://github.com/toby63/shiftfs-dkms/tree/k5.11) | 5.11 branch | Deprecated as the kernel branch is EOL. |
 
 #### What about older versions?
 
