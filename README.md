@@ -59,7 +59,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
   
  With git:
 
-      # git clone -b k5.8 https://github.com/toby63/shiftfs-dkms.git shiftfs-k58
+      # git clone -b k5.10 https://github.com/toby63/shiftfs-dkms.git shiftfs-k510
 
 
 #### 2. (Optional, but recommended) Update shiftfs.c:
