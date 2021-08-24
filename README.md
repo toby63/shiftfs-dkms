@@ -31,7 +31,7 @@ See: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitat
 
 | Last Update: |
 | --- |
-| July 2021 |
+| August 2021 |
 
 
 | Version: | Status: |
@@ -85,8 +85,10 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
    Run as root or with sudo:
 
        # ./remove1
-       
+
 ### Upgrade:
+
+**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/impish/log/fs/shiftfs.c?h=master-next)) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
  
  * Uninstall/Remove the old version:
 
