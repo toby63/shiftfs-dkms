@@ -1,5 +1,5 @@
 
-# shiftfs-dkms version for Kernel 5.4+
+# shiftfs-dkms version for Kernel 5.4.x
 
 Content:
 --------
@@ -19,7 +19,7 @@ Content:
 
 **Note:** 
 
-- This version is compatible with Linux Kernel versions >=5.4 & <5.8 (5.4 and newer, but older than 5.8)
+- This version is compatible with Linux Kernel versions 5.4.x.
 - This version is not tested by me anymore.
 
 The **shiftfs.c** file is from the Ubuntu Focal kernel repo, see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/focal/tree/fs/shiftfs.c)
@@ -89,6 +89,9 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
        # ./remove1
        
 ### Upgrade:
+
+**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/focal/log/fs/shiftfs.c) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
+
  
  * Uninstall/Remove the old version:
 
