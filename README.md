@@ -17,7 +17,7 @@ Content:
 
 ## About
 
-**Note:** This version is for Linux Kernel version 5.13 and newer.
+**Note:** This version is for Linux Kernel versions 5.13.x.
 
 The **shiftfs.c** file is from the Ubuntu Impish kernel repo, see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/impish/log/fs/shiftfs.c?h=master-next)
 
@@ -88,7 +88,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 
 ### Upgrade:
 
-**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/impish/log/fs/shiftfs.c?h=master-next)) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
+**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/impish/log/fs/shiftfs.c?h=master-next) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
  
  * Uninstall/Remove the old version:
 
