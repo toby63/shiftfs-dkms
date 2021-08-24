@@ -1,5 +1,5 @@
 
-# shiftfs-dkms version for Kernel 5.13+
+# shiftfs-dkms version for Kernel 5.13.x
 
 Content:
 --------
