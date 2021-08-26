@@ -19,7 +19,7 @@ This repo provides scripts to install the (Linux-)kernel module **shiftfs** via 
 
 ### About shiftfs
 
-shiftfs is a kernel filesystem for the linux kernel.   
+shiftfs is a kernel filesystem for the Linux kernel.   
 It provides easier uid/gid-shifting for containers and can be used for example with [LXD](https://linuxcontainers.org/lxd/) (see also: [Usecases](#usecases)).
 
 shiftfs was made by:   
@@ -31,9 +31,15 @@ https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155
 ### News
 
 The official successor for shiftfs is now available.   
-The original shiftfs (the version used in this repo) will still be available for kernel versions **5.10** and **5.4** and supported until approximately April 2022 ([Source](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/12)).   
-Kernel version **5.13** will have intermediate support as well.   
-See **Overview of Branches/Versions** below for more information.   
+
+The original shiftfs (the version used in this repo) will still be available for:
+
+- Newer kernel versions: **5.13** until approximately 5.16 and beyond ([Source](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/16)).   
+- Longterm kernel versions: **5.10** and **5.4**, with support until approximately April 2022 ([Source](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/12)).   
+
+See **Overview of Branches/Versions** below for more information on each available version in this repo.   
+
+#### Details about the successor for shiftfs
 
 According to the LXD developers, the new approach is natively included in the linux kernel (in kernel versions **5.12** and newer) - so no need for dkms-modules in the future.    
 Support for the new approach is implemented since LXD version **4.16**, and the transition will be seamless, so LXD will automatically switch to the new approach, if available.   
@@ -46,6 +52,7 @@ For more information see:
 - Official LXD forum:
     - [Comment 1](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/2)
     - [Comment 2](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/13)
+    - [Comment 3](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/12)
 - [LXD Pull Request](https://github.com/lxc/lxd/pull/8778)
 
 ### Overview of Branches/Versions
