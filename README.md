@@ -34,7 +34,7 @@ The official successor for shiftfs is now available.
 
 The original shiftfs (the version used in this repo) will still be available for:
 
-- Newer kernel versions: **5.13** until approximately 5.16 and beyond ([Source](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/16)).   
+- Newer kernel versions: **5.13** and **5.14** until approximately 5.16 and beyond ([Source](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/16)).   
 - Longterm kernel versions: **5.10** and **5.4**, with support until approximately April 2022 ([Source](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/12)).   
 
 See **Overview of Branches/Versions** below for more information on each available version in this repo.   
@@ -61,10 +61,10 @@ There are different versions of shiftfs.c for different kernel versions, so I co
 
 | Branch/Version: | For Kernel(version): | Further Notes: |
 | --- | --- | --- |
-| [k5.13](https://github.com/toby63/shiftfs-dkms/tree/k5.13) | 5.13 branch | - |
-| [k5.10](https://github.com/toby63/shiftfs-dkms/tree/k5.10) | 5.10 branch (longterm version) | - |
-| [k5.4](https://github.com/toby63/shiftfs-dkms/tree/k5.4) | 5.4 branch (longterm version) | - |
-| [Arch Linux Packages in AUR](https://aur.archlinux.org/packages/?O=0&K=shiftfs) | for packages linux (5.13) and linux-lts (5.10) | - |
+| [k5.13](https://github.com/toby63/shiftfs-dkms/tree/k5.13) | 5.14.x and 5.13.x | - |
+| [k5.10](https://github.com/toby63/shiftfs-dkms/tree/k5.10) | 5.10.x (longterm version) and 5.8.x | - |
+| [k5.4](https://github.com/toby63/shiftfs-dkms/tree/k5.4) | 5.4 (longterm version) | - |
+| [Arch Linux Packages in AUR](https://aur.archlinux.org/packages/?O=0&K=shiftfs) | for packages linux (5.14) and linux-lts (5.10) | - |
 
 | Deprecated Branches: | For Kernel(version): |  Further Notes: |
 | --- | --- | --- |
