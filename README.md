@@ -38,7 +38,7 @@ See: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitat
 
 | Version: | Status: |
 | --- | --- | 
-| k54-1 | working | 
+| k54 | working |
 
 If you want to post a testreport, take a look at: [Testreports Issue on Github](https://github.com/toby63/shiftfs-dkms/issues/3).
 
