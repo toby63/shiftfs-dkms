@@ -19,8 +19,8 @@ Content:
 
 **Note:** 
 
-- This version is compatible with Linux Kernel versions 5.10.x.
-- This version is not tested by me anymore.
+- This version is compatible with Linux Kernel versions 5.10.x and 5.8.x
+- This version is not tested by me anymore
 
 The **shiftfs.c** file is from the Ubuntu Groovy kernel repo, see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/groovy/tree/fs/shiftfs.c)
 
@@ -38,7 +38,7 @@ See: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitat
 
 | Version: | Status: |
 | --- | --- | 
-| k58-1 | working | 
+| k510 | working | 
 
 If you want to post a testreport, take a look at: [Testreports Issue on Github](https://github.com/toby63/shiftfs-dkms/issues/3).
 
