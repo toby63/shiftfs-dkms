@@ -15,7 +15,7 @@
 
 ## About
 
-This repo provides scripts to install the (Linux-)kernel module **shiftfs** via dkms.   
+This repo provides scripts to install the (Linux) kernel module **shiftfs** via dkms.   
 
 ### About shiftfs
 
@@ -25,35 +25,35 @@ It provides easier uid/gid-shifting for containers and can be used for example w
 shiftfs was made by:   
 See [Credits](#credits)
 
-* Further information on shiftfs:
+* Further information on shiftfs can be found in the official LXD Forum:
 https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155
 
-### News
+### Important News
 
-The official successor for shiftfs is now available.   
+The official successor of shiftfs is available, see details below.   
 
 The original shiftfs (the version used in this repo) will still be available for:
 
-- Newer kernel versions: **5.13**, **5.14** and **5.15** until approximately 5.16 and beyond ([Source](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/16)).   
+- Newer kernel versions until approximately 5.16 (maybe longer): **5.13**, **5.14** and **5.15** ([Source](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/16)).   
 - Longterm kernel versions: **5.10** and **5.4**, with support until approximately April 2022 ([Source](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/12)).   
 
 See **Overview of Branches/Versions** below for more information on each available version in this repo.   
 
 #### Details about the successor for shiftfs
 
-According to the LXD developers, the new approach is natively included in recent linux kernels (in kernel versions **5.12** and newer) - so no need for dkms-modules in the future.    
-Support for the new approach is implemented since LXD version **4.16**, and the transition will be seamless, so LXD will automatically switch to the new approach, if available.   
-**Note:** For now there are some limitations though, as only ext4, xfs and vfat are supported as underlying filesystems for containers and volumes.
-See [Comment 2](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/13) and [Comment 4](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/16) for details.   
+The new approach called "**idmapped mounts**" is natively included in recent Linux kernels (since kernel version **5.12**) - so no need for dkms-modules in the future.    
+Support for the new approach is implemented since LXD version **4.16**, and the transition is seamless, so LXD will automatically switch to the new approach, if available.   
+**Note:** For now there are some limitations though, as only **ext4, xfs, vfat and btrfs** (since kernel version **5.15**) are supported as underlying filesystems for containers and volumes. **ZFS and cephfs** are planned to be supported in future kernels or seperately.   
 So if you use other filesystems, I recommend to use the original shiftfs for now, until it is fixed.   
 
-For more information see:
+Also see:
 
 - Official LXD forum:
     - [Comment 1](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/2)
     - [Comment 2](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/13)
     - [Comment 3](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/12)
     - [Comment 4](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/16)
+    - [Comment 5](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/18)
 - [LXD Pull Request](https://github.com/lxc/lxd/pull/8778)
 
 ### Overview of Branches/Versions
@@ -67,14 +67,13 @@ There are different versions of shiftfs.c for different kernel versions, so I co
 | [k5.4](https://github.com/toby63/shiftfs-dkms/tree/k5.4) | 5.4 (longterm version) | - |
 | [Arch Linux Packages in AUR](https://aur.archlinux.org/packages/?O=0&K=shiftfs) | for packages linux (5.14) and linux-lts (5.10) | - |
 
-| Deprecated Branches: | For Kernel(version): |  Further Notes: |
-| --- | --- | --- |
-| [k5.11](https://github.com/toby63/shiftfs-dkms/tree/k5.11) | 5.11 branch | Deprecated as the kernel branch is EOL. |
+#### What about other kernel versions?
 
-#### What about older versions?
+Other kernel versions that are newer than 5.x might work, but there is no guarantee and I will not provide that.
+You have the best chances if you search inside the Ubuntu kernel repos and might find a version that matches your kernel version (e.g. [hirsute kernel repo - master next](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/hirsute/tree/fs/shiftfs.c?h=master-next) for 5.11).
 
-shiftfs will most likely not work on kernels older than version 5.
-Thus the only recent branch newer than 5 is 5.4.
+shiftfs will most likely not work on kernels older than version 5.x.
+Thus the only recent and active branch newer than 5 is 5.4.
 See also [kernel.org](https://www.kernel.org/).
 
 
