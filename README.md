@@ -44,7 +44,7 @@ See **Overview of Branches/Versions** below for more information on each availab
 The new approach called "**idmapped mounts**" is natively included in recent Linux kernels (since kernel version **5.12**) - so no need for dkms-modules in the future.    
 Support for the new approach is implemented since LXD version **4.16**, and the transition is seamless, so LXD will automatically switch to the new approach, if available.   
 **Note:** For now there are some limitations though, as only **ext4, xfs, vfat and btrfs** (since kernel version **5.15**) are supported as underlying filesystems for containers and volumes. **ZFS and cephfs** are planned to be supported in future kernels or seperately.   
-So if you use other filesystems, I recommend to use the original shiftfs for now, until it is fixed.   
+So if you use unsupported filesystems, I recommend to use the original shiftfs for now, until support for them is included in the new approach. 
 
 Also see:
 
