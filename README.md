@@ -1,5 +1,5 @@
 
-# shiftfs-dkms version for Kernels 5.13.x to 5.15.x
+# shiftfs-dkms version for Kernels 5.16.x and 5.15.x
 
 Content:
 --------
@@ -17,26 +17,31 @@ Content:
 
 ## About
 
-**Note:** This version is compatible with Linux Kernel versions 5.13.x, 5.14.x and 5.15.x .
+**Note:** This version is compatible with Linux Kernel versions 5.16.x and 5.15.x .
 
-The **shiftfs.c** file is from the Ubuntu Impish kernel repo, see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/impish/log/fs/shiftfs.c?h=master-next)
+The **shiftfs.c** file is from the Ubuntu Jammy kernel repo, see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=master-next)
 
-For an overview and more information see [README.md in master branch](https://github.com/toby63/shiftfs-dkms/blob/master/README.md).
+For an overview of shiftfs and more information see [README.md in master branch](https://github.com/toby63/shiftfs-dkms/blob/master/README.md).
 
 ## Limitations
 
-See: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitations)
+Upstream is warning about potential regressions, if shiftfs is
+used with filesystem namespaces.
+
+See: [commit](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/commit/fs/shiftfs.c?h=master-next&id=d347e71d2c0b4fc79891b00c47971f1ac5bd1ca8)
+
+See also: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitations) for more limitations.
 
 ## Status
 
 | Last Update: |
 | --- |
-| November 2021 |
+| January 2022 |
 
 
 | Version: | Status: |
 | --- | --- | 
-| k513 | recent |
+| k516 | recent |
 
 If you want to post a testreport, take a look at: [Testreports Issue on Github](https://github.com/toby63/shiftfs-dkms/issues/3).
 
@@ -57,13 +62,13 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
   
  With git:
 
-      # git clone -b k5.13 https://github.com/toby63/shiftfs-dkms.git shiftfs-k513
+      # git clone -b k5.16 https://github.com/toby63/shiftfs-dkms.git shiftfs-k516
 
 
 #### 2. (Optional, but recommended) Update shiftfs.c:
 
  The shiftfs.c included might be outdated, thus the update-script.
- You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/impish/log/fs/shiftfs.c?h=master-next)) whether an update is available.
+ You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=master-next)) whether an update is available.
 
  Run as user:
 
@@ -88,7 +93,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 
 ### Upgrade:
 
-**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/impish/log/fs/shiftfs.c?h=master-next) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
+**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=master-next) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
  
  * Uninstall/Remove the old version:
 
@@ -129,7 +134,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
    
 * Special thanks to:
    * Stéphane Graber @stgraber
-   * Christian Brauner @brauner   
+   * Christian Brauner @brauner
    
   for the helpful advice.
 
