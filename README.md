@@ -34,15 +34,15 @@ The official successor of shiftfs is available, see details below.
 
 The original shiftfs (the version used in this repo) will still be available for:
 
-- Newer kernel versions until approximately 5.16 (maybe longer): **5.13**, **5.14** and **5.15** ([Source](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/16)).   
+- Newer kernel versions until approximately 5.16 (maybe longer), the following are available now: **5.16**, **5.15**, **5.14** and **5.13** ([Source](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/16)).   
 - Longterm kernel versions: **5.10** and **5.4**, with support until approximately April 2022 ([Source](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/12)).   
 
 See **Overview of Branches/Versions** below for more information on each available version in this repo.   
 
 #### Details about the successor for shiftfs
 
-The new approach called "**idmapped mounts**" is natively included in recent Linux kernels (since kernel version **5.12**) - so no need for dkms-modules in the future.    
-Support for the new approach is implemented since LXD version **4.16**, and the transition is seamless, so LXD will automatically switch to the new approach, if available.   
+The new approach called "**idmapped mounts**" is natively included in recent Linux kernels (since kernel version **5.12**) - so no need for dkms-modules.    
+Support for the new approach is implemented since LXD version **4.16**, and the transition is seamless, so LXD will automatically switch to the new approach, if available and all commands/options stay the same.   
 **Note:** For now there are some limitations though, as only **ext4, xfs, vfat and btrfs** (since kernel version **5.15**) are supported as underlying filesystems for containers and volumes. **ZFS and cephfs** are planned to be supported in future kernels or seperately.   
 So if you use unsupported filesystems, I recommend to use the original shiftfs for now, until support for them is included in the new approach. 
 
@@ -62,10 +62,11 @@ There are different versions of shiftfs.c for different kernel versions, so I co
 
 | Branch/Version: | For Kernel(version): | Further Notes: |
 | --- | --- | --- |
+| [k5.16](https://github.com/toby63/shiftfs-dkms/tree/k5.16) | 5.16.x and 5.15.x | - |
 | [k5.13](https://github.com/toby63/shiftfs-dkms/tree/k5.13) | 5.15.x, 5.14.x and 5.13.x | - |
 | [k5.10](https://github.com/toby63/shiftfs-dkms/tree/k5.10) | 5.10.x (longterm version) and 5.8.x | - |
 | [k5.4](https://github.com/toby63/shiftfs-dkms/tree/k5.4) | 5.4 (longterm version) | - |
-| [Arch Linux Packages in AUR](https://aur.archlinux.org/packages/?O=0&K=shiftfs) | for packages linux (5.14) and linux-lts (5.10) | - |
+| [Arch Linux Packages in AUR](https://aur.archlinux.org/packages/?O=0&K=shiftfs) | for packages linux (5.16) and linux-lts (5.15) | - |
 
 #### What about other kernel versions?
 
