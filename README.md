@@ -25,10 +25,7 @@ For an overview of shiftfs and more information see [README.md in master branch]
 
 ## Limitations
 
-Upstream is warning about potential regressions, if shiftfs is
-used with filesystem namespaces.
-
-See: [commit](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/commit/fs/shiftfs.c?h=master-next&id=d347e71d2c0b4fc79891b00c47971f1ac5bd1ca8)
+- shiftfs shouldn’t be mounted on top of idmapped mounts and vice versa (see: [comment by developer](https://discuss.linuxcontainers.org/t/shiftfs-shiftfs-error-with-5-16-kernel/13103/9))
 
 See also: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitations) for more limitations.
 
@@ -68,7 +65,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 #### 2. (Optional, but recommended) Update shiftfs.c:
 
  The shiftfs.c included might be outdated, thus the update-script.
- You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=master-next)) whether an update is available.
+ You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=master-next) whether an update is available.
 
  Run as user:
 
