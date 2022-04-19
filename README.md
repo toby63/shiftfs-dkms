@@ -28,13 +28,13 @@ See [Credits](#credits)
 * Further information on shiftfs can be found in the official LXD Forum:
 https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155
 
-### Important News
+### Important Info
 
 The official successor of shiftfs is available, see details below.   
 
 The original shiftfs (the version used in this repo) will still be available for:
 
-- Newer kernel versions until approximately 5.16 (maybe longer), the following are available now: **5.16**, **5.15**, **5.14** and **5.13** ([Source](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/16)).   
+- Newer kernel versions until approximately 5.17 (maybe longer), the following are available now: **5.17**, **5.16**, **5.15**, **5.14** and **5.13** ([Source](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/16)).
 - Longterm kernel versions: **5.10** and **5.4**, with support until approximately April 2022 ([Source](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/12)).   
 
 See **Overview of Branches/Versions** below for more information on each available version in this repo.   
@@ -62,6 +62,7 @@ There are different versions of shiftfs.c for different kernel versions, so I co
 
 | Branch/Version: | For Kernel(version): | Further Notes: |
 | --- | --- | --- |
+| [k5.17](https://github.com/toby63/shiftfs-dkms/tree/k5.17) | 5.17.x | - |
 | [k5.16](https://github.com/toby63/shiftfs-dkms/tree/k5.16) | 5.16.x and 5.15.x | - |
 | [k5.13](https://github.com/toby63/shiftfs-dkms/tree/k5.13) | 5.15.x, 5.14.x and 5.13.x | - |
 | [k5.10](https://github.com/toby63/shiftfs-dkms/tree/k5.10) | 5.10.x (longterm version) and 5.8.x | - |
