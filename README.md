@@ -1,5 +1,5 @@
 
-# shiftfs-dkms version for Kernels 5.16.x and 5.15.x
+# shiftfs-dkms version for Kernels 5.17.x
 
 Content:
 --------
@@ -17,9 +17,9 @@ Content:
 
 ## About
 
-**Note:** This version is compatible with Linux Kernel versions 5.16.x and 5.15.x .
+**Note:** This version is compatible with Linux Kernel versions 5.17.x.
 
-The **shiftfs.c** file is from the Ubuntu Jammy kernel repo, see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=master-next)
+The **shiftfs.c** file is from the Ubuntu Jammy kernel repo (HWE-5.17 branch), see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=hwe-5.17)
 
 For an overview of shiftfs and more information see [README.md in master branch](https://github.com/toby63/shiftfs-dkms/blob/master/README.md).
 
@@ -36,12 +36,12 @@ See also: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#li
 
 | Last Update: |
 | --- |
-| January 2022 |
+| April 2022 |
 
 
 | Version: | Status: |
 | --- | --- | 
-| k516 | recent |
+| k517 | recent |
 
 If you want to post a testreport, take a look at: [Testreports Issue on Github](https://github.com/toby63/shiftfs-dkms/issues/3).
 
@@ -62,13 +62,13 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
   
  With git:
 
-      # git clone -b k5.16 https://github.com/toby63/shiftfs-dkms.git shiftfs-k516
+      # git clone -b k5.17 https://github.com/toby63/shiftfs-dkms.git shiftfs-k517
 
 
 #### 2. (Optional, but recommended) Update shiftfs.c:
 
  The shiftfs.c included might be outdated, thus the update-script.
- You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=master-next)) whether an update is available.
+ You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=hwe-5.17)) whether an update is available.
 
  Run as user:
 
@@ -93,7 +93,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 
 ### Upgrade:
 
-**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=master-next) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
+**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=hwe-5.17) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
  
  * Uninstall/Remove the old version:
 
