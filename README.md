@@ -1,5 +1,5 @@
 
-# shiftfs-dkms version for Kernels 5.13.x to 5.15.x
+# shiftfs-dkms version for Kernels 5.13.x
 
 Content:
 --------
@@ -17,7 +17,7 @@ Content:
 
 ## About
 
-**Note:** This version is compatible with Linux Kernel versions 5.13.x, 5.14.x and 5.15.x .
+**Note:** This version is compatible with Linux Kernel versions 5.13.x (and probably 5.14.x).
 
 The **shiftfs.c** file is from the Ubuntu Impish kernel repo, see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/impish/log/fs/shiftfs.c?h=master-next)
 
