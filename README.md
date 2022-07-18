@@ -1,47 +1,49 @@
 
-# shiftfs-dkms version for Kernels 5.17.x
+# shiftfs-dkms version for Kernels 5.18.x and 5.19.x
 
 Content:
 --------
 * [About](#about)
-* [Limitations](#limitations)
+* [Known Issues and Limitations](#known-issues)
 * [Status](#status)
 * [Howto](#howto)
     * [Install](#install)
     * [Uninstall/Remove](#uninstallremove)
     * [Upgrade](#upgrade)
-* [Bugreports](#reporting-bugs)
+* [Bugreports](#report-bugs)
 * [Credits](#credits)
 * [Copyright](#copyrightlicense)
 
 
 ## About
 
-**Note:** This version is compatible with Linux Kernel versions 5.17.x.
+**Note:** This version is compatible with Linux Kernel versions 5.18.x and 5.19.x.
 
-The **shiftfs.c** file is from the Ubuntu Jammy kernel repo (HWE-5.17 branch), see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=hwe-5.17)
+5.19.x is untested for now.
+
+The **shiftfs.c** file is from the Ubuntu Kinetic kernel repo (lowlatency-next branch), see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/kinetic/log/fs/shiftfs.c?h=lowlatency-next)
 
 For an overview of shiftfs and more information see [README.md in master branch](https://github.com/toby63/shiftfs-dkms/blob/master/README.md).
 
-## Limitations
+## Known Issues
 
 Upstream is warning about potential regressions, if shiftfs is
 used with filesystem namespaces.
 
 See: [commit](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/commit/fs/shiftfs.c?h=master-next&id=d347e71d2c0b4fc79891b00c47971f1ac5bd1ca8)
 
-See also: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitations) for more limitations.
+See also the [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitations) for more known issues and limitations.
 
 ## Status
 
 | Last Update: |
 | --- |
-| April 2022 |
+| July 2022 |
 
 
 | Version: | Status: |
 | --- | --- | 
-| k517 | recent |
+| k518 | recent |
 
 If you want to post a testreport, take a look at: [Testreports Issue on Github](https://github.com/toby63/shiftfs-dkms/issues/3).
 
@@ -62,13 +64,13 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
   
  With git:
 
-      # git clone -b k5.17 https://github.com/toby63/shiftfs-dkms.git shiftfs-k517
+      # git clone -b k5.18 https://github.com/toby63/shiftfs-dkms.git shiftfs-k518
 
 
 #### 2. (Optional, but recommended) Update shiftfs.c:
 
  The shiftfs.c included might be outdated, thus the update-script.
- You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=hwe-5.17)) whether an update is available.
+ You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/kinetic/log/fs/shiftfs.c?h=lowlatency-next)) whether an update is available.
 
  Run as user:
 
@@ -93,7 +95,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 
 ### Upgrade:
 
-**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=hwe-5.17) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
+**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/kinetic/log/fs/shiftfs.c?h=lowlatency-next) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
  
  * Uninstall/Remove the old version:
 
@@ -112,9 +114,9 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
  * Repeat Step 2. and 3.
 
 
-## Reporting bugs
+## Report bugs
 
- Report bugs here:
+ Report bugs at:
  https://github.com/toby63/shiftfs-dkms/issues
 
 
