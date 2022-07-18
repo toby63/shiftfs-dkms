@@ -4,10 +4,10 @@
 ## Content
 
 * [About](#about)
-* [Limitations](#limitations)
+* [Limitations and Known Issues](#known-issues)
 * [Status](#status)
 * [Usecases](#usecases)
-* [Bugreports](#reporting-bugs)
+* [How to report bugs](#report-bugs)
 * [Credits](#credits)
 * [Copyright](#copyrightlicense)
 
@@ -32,16 +32,16 @@ https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155
 
 The official successor of shiftfs is available, see details below.   
 
-The original shiftfs (the version used in this repo) will still be available for:
+The original shiftfs (the version used in this repo) is still available for:
 
-- Newer kernel versions until approximately 5.17 (maybe longer), the following are available now: **5.17**, **5.16**, **5.15**, **5.14** and **5.13** ([Source](https://discuss.linuxcontainers.org/t/lxd-4-16-has-been-released/11547/16)).
-- Longterm kernel versions: **5.10** and **5.4**, with support until approximately April 2022 ([Source](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/12)).   
+- Newer kernel versions (the end of support is unknown for now, upstream will probably announce it someday), including: **5.19**, **5.18** and more
+- Longterm kernel versions: **5.15**, **5.10** and **5.4**
 
 See **Overview of Branches/Versions** below for more information on each available version in this repo.   
 
 #### Details about the successor for shiftfs
 
-The new approach called "**idmapped mounts**" is natively included in recent Linux kernels (since kernel version **5.12**) - so no need for dkms-modules.    
+The new approach called "**idmapped mounts**" is natively included in recent Linux kernels (since kernel version **5.12**) - so there is no need for dkms-modules anymore.
 Support for the new approach is implemented since LXD version **4.16**, and the transition is seamless, so LXD will automatically switch to the new approach, if available and all commands/options stay the same.   
 **Note:** For now there are some limitations though, as only **ext4, xfs, vfat and btrfs** (since kernel version **5.15**) are supported as underlying filesystems for containers and volumes. **ZFS and cephfs** are planned to be supported in future kernels or seperately.   
 So if you use unsupported filesystems, I recommend to use the original shiftfs for now, until support for them is included in the new approach. 
@@ -62,6 +62,7 @@ There are different versions of shiftfs.c for different kernel versions, so I co
 
 | Branch/Version: | For Kernel(version): | Further Notes: |
 | --- | --- | --- |
+| [k5.18](https://github.com/toby63/shiftfs-dkms/tree/k5.18) | 5.18.x and 5.19.x | 5.19.x is not tested for now. |
 | [k5.17](https://github.com/toby63/shiftfs-dkms/tree/k5.17) | 5.17.x | Kernel version is deprecated upstream, see [kernel.org](https://www.kernel.org/). |
 | [k5.16](https://github.com/toby63/shiftfs-dkms/tree/k5.16) | 5.15.x (longterm version) (and probably 5.16.x) | - |
 | [k5.13](https://github.com/toby63/shiftfs-dkms/tree/k5.13) | 5.13.x (and probably 5.14.x) | Kernel versions are deprecated upstream, see [kernel.org](https://www.kernel.org/). |
@@ -79,7 +80,7 @@ Thus the only recent and active branch newer than 5 is 5.4.
 See also [kernel.org](https://www.kernel.org/).
 
 
-## Limitations
+## Known Issues
 
 * **Regarding Overlayfs inside container:**   
 shiftfs can prevent the use of overlayfs **inside a container**.      
@@ -109,9 +110,9 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
   and in the official Forum of LXD: [Usecases for shiftfs](https://discuss.linuxcontainers.org/t/lxd-usecases-of-shiftfs-volume-disk-share/7735) and [Trying out shiftfs](https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155).
 
 
-## Reporting bugs
+## Report bugs
 
- Report bugs here:
+ Report bugs at:
  https://github.com/toby63/shiftfs-dkms/issues
 
 
