@@ -62,9 +62,9 @@ There are different versions of shiftfs.c for different kernel versions, so I co
 
 | Branch/Version: | For Kernel(version): | Further Notes: |
 | --- | --- | --- |
-| [k5.17](https://github.com/toby63/shiftfs-dkms/tree/k5.17) | 5.17.x | - |
-| [k5.16](https://github.com/toby63/shiftfs-dkms/tree/k5.16) | 5.16.x and 5.15.x | - |
-| [k5.13](https://github.com/toby63/shiftfs-dkms/tree/k5.13) | 5.15.x, 5.14.x and 5.13.x | - |
+| [k5.17](https://github.com/toby63/shiftfs-dkms/tree/k5.17) | 5.17.x | Kernel version is deprecated upstream, see [kernel.org](https://www.kernel.org/). |
+| [k5.16](https://github.com/toby63/shiftfs-dkms/tree/k5.16) | 5.15.x (longterm version) (and probably 5.16.x) | - |
+| [k5.13](https://github.com/toby63/shiftfs-dkms/tree/k5.13) | 5.13.x (and probably 5.14.x) | Kernel versions are deprecated upstream, see [kernel.org](https://www.kernel.org/). |
 | [k5.10](https://github.com/toby63/shiftfs-dkms/tree/k5.10) | 5.10.x (longterm version) and 5.8.x | - |
 | [k5.4](https://github.com/toby63/shiftfs-dkms/tree/k5.4) | 5.4 (longterm version) | - |
 | [Arch Linux Packages in AUR](https://aur.archlinux.org/packages/?O=0&K=shiftfs) | for packages "linux" and "linux-lts" | see the AUR pages for more details. |
