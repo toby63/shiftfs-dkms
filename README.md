@@ -30,11 +30,11 @@ https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155
 
 ### Important Info
 
-The official successor of shiftfs is available, see details below.   
+The official successor of shiftfs is available now, see details below.   
 
 The original shiftfs (the version used in this repo) is still available for:
 
-- Newer kernel versions (the end of support is unknown for now, upstream will probably announce it someday), including: **5.19**, **5.18** and more
+- Newer kernel versions (the end of support is unknown for now, upstream will probably announce it someday (see also: [Issue 24](https://github.com/toby63/shiftfs-dkms/issues/24))), including: **5.19**, **5.18** and more
 - Longterm kernel versions: **5.15**, **5.10** and **5.4**
 
 See **Overview of Branches/Versions** below for more information on each available version in this repo.   
@@ -46,7 +46,7 @@ Support for the new approach is implemented since LXD version **4.16**, and the 
 **Note:** For now there are some limitations though, as only **ext4, xfs, vfat and btrfs** (since kernel version **5.15**) are supported as underlying filesystems for containers and volumes. **ZFS and cephfs** are planned to be supported in future kernels or seperately.   
 So if you use unsupported filesystems, I recommend to use the original shiftfs for now, until support for them is included in the new approach. 
 
-Also see:
+Sources:
 
 - Official LXD forum:
     - [Comment 1](https://discuss.linuxcontainers.org/t/shared-folder-between-container-and-host-is-cached/10725/2)
