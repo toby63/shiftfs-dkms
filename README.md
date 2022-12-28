@@ -19,7 +19,7 @@ Content:
 
 **Note:** This version is compatible with Linux Kernel versions 5.18.x and 5.19.x.
 
-5.19.x is untested for now.
+It might also be compatible with 6.0.x, but 6.0.x and 5.19.x are untested.
 
 The **shiftfs.c** file is from the Ubuntu Kinetic kernel repo (lowlatency-next branch), see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/kinetic/log/fs/shiftfs.c?h=lowlatency-next)
 
@@ -38,7 +38,7 @@ See also the [README.md in master branch](https://github.com/toby63/shiftfs-dkms
 
 | Last Update: |
 | --- |
-| July 2022 |
+| December 2022 |
 
 
 | Version: | Status: |
