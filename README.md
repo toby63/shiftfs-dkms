@@ -1,5 +1,5 @@
 
-# shiftfs-dkms version for Kernels 5.18.x and 5.19.x
+# shiftfs-dkms version for Kernels 6.1.x
 
 Content:
 --------
@@ -17,11 +17,9 @@ Content:
 
 ## About
 
-**Note:** This version is compatible with Linux Kernel versions 5.18.x and 5.19.x.
+**Note:** This version is compatible with Linux Kernel versions 6.1.x.
 
-5.19.x is untested for now.
-
-The **shiftfs.c** file is from the Ubuntu Kinetic kernel repo (lowlatency-next branch), see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/kinetic/log/fs/shiftfs.c?h=lowlatency-next)
+The **shiftfs.c** file is from the Ubuntu Lunar kernel repo (lowlatency-next branch), see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=lowlatency-next)
 
 For an overview of shiftfs and more information see [README.md in master branch](https://github.com/toby63/shiftfs-dkms/blob/master/README.md).
 
@@ -32,18 +30,18 @@ used with filesystem namespaces.
 
 See: [commit](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/commit/fs/shiftfs.c?h=master-next&id=d347e71d2c0b4fc79891b00c47971f1ac5bd1ca8)
 
-See also the [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitations) for more known issues and limitations.
+For more known issues and limitations, see also the [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitations).
 
 ## Status
 
 | Last Update: |
 | --- |
-| July 2022 |
+| December 2022 |
 
 
 | Version: | Status: |
 | --- | --- | 
-| k518 | recent |
+| k61 | recent |
 
 If you want to post a testreport, take a look at: [Testreports Issue on Github](https://github.com/toby63/shiftfs-dkms/issues/3).
 
@@ -64,13 +62,13 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
   
  With git:
 
-      # git clone -b k5.18 https://github.com/toby63/shiftfs-dkms.git shiftfs-k518
+      # git clone -b k6.1 https://github.com/toby63/shiftfs-dkms.git shiftfs-k61
 
 
 #### 2. (Optional, but recommended) Update shiftfs.c:
 
  The shiftfs.c included might be outdated, thus the update-script.
- You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/kinetic/log/fs/shiftfs.c?h=lowlatency-next)) whether an update is available.
+ You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=lowlatency-next)) whether an update is available.
 
  Run as user:
 
@@ -95,7 +93,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 
 ### Upgrade:
 
-**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/kinetic/log/fs/shiftfs.c?h=lowlatency-next) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
+**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=lowlatency-next) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
  
  * Uninstall/Remove the old version:
 
