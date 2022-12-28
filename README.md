@@ -34,7 +34,7 @@ The official successor of shiftfs is available now, see details below.
 
 The original shiftfs (the version used in this repo) is still available for:
 
-- Newer kernel versions (the end of support is unknown for now, upstream will probably announce it someday (see also: [Issue 24](https://github.com/toby63/shiftfs-dkms/issues/24))), including: **5.19**, **5.18** and more
+- Newer kernel versions (the end of support is unknown for now, upstream will probably announce it someday (see also: [Issue 24](https://github.com/toby63/shiftfs-dkms/issues/24))), including: **6.1** and more
 - Longterm kernel versions: **5.15**, **5.10** and **5.4**
 
 See **Overview of Branches/Versions** below for more information on each available version in this repo.   
@@ -62,7 +62,8 @@ There are different versions of shiftfs.c for different kernel versions, so I co
 
 | Branch/Version: | For Kernel(version): | Further Notes: |
 | --- | --- | --- |
-| [k5.18](https://github.com/toby63/shiftfs-dkms/tree/k5.18) | 5.18.x and 5.19.x | 5.19.x is not tested for now. |
+| [k6.1](https://github.com/toby63/shiftfs-dkms/tree/k6.1) | 6.1.x | Does not work with 6.0.x. |
+| [k5.18](https://github.com/toby63/shiftfs-dkms/tree/k5.18) | 5.18.x, 5.19.x (and probably 6.0.x) | 5.19.x and 6.0.x are not tested. |
 | [k5.17](https://github.com/toby63/shiftfs-dkms/tree/k5.17) | 5.17.x | Kernel version is deprecated upstream, see [kernel.org](https://www.kernel.org/). |
 | [k5.16](https://github.com/toby63/shiftfs-dkms/tree/k5.16) | 5.15.x (longterm version) (and probably 5.16.x) | - |
 | [k5.13](https://github.com/toby63/shiftfs-dkms/tree/k5.13) | 5.13.x (and probably 5.14.x) | Kernel versions are deprecated upstream, see [kernel.org](https://www.kernel.org/). |
