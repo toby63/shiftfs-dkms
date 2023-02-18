@@ -36,7 +36,7 @@ For more known issues and limitations, see also the [README.md in master branch]
 
 | Last Update: |
 | --- |
-| December 2022 |
+| February 2023 (shiftfs.c is from November 2022) |
 
 
 | Version: | Status: |
