@@ -60,10 +60,12 @@ Sources:
 
 There are different versions of shiftfs.c for different kernel versions, so I cover a few of them:
 
+Note: I only test the most recent branch regularly, all others are not regularly tested.
+
 | Branch/Version: | For Kernel(version): | Further Notes: |
 | --- | --- | --- |
 | [k6.1](https://github.com/toby63/shiftfs-dkms/tree/k6.1) | 6.1.x | Does not work with 6.0.x. |
-| [k5.18](https://github.com/toby63/shiftfs-dkms/tree/k5.18) | 5.18.x, 5.19.x (and probably 6.0.x) | 5.19.x and 6.0.x are not tested. |
+| [k5.18](https://github.com/toby63/shiftfs-dkms/tree/k5.18) | 5.18.x, 5.19.x (and probably 6.0.x) | 5.19.x and 6.0.x are not tested. Kernel versions are deprecated upstream, see [kernel.org](https://www.kernel.org/). |
 | [k5.17](https://github.com/toby63/shiftfs-dkms/tree/k5.17) | 5.17.x | Kernel version is deprecated upstream, see [kernel.org](https://www.kernel.org/). |
 | [k5.16](https://github.com/toby63/shiftfs-dkms/tree/k5.16) | 5.15.x (longterm version) (and probably 5.16.x) | - |
 | [k5.13](https://github.com/toby63/shiftfs-dkms/tree/k5.13) | 5.13.x (and probably 5.14.x) | Kernel versions are deprecated upstream, see [kernel.org](https://www.kernel.org/). |
@@ -83,14 +85,14 @@ See also [kernel.org](https://www.kernel.org/).
 
 ## Known Issues
 
-* **Regarding Overlayfs inside container:**   
+* **Regarding Overlayfs inside a container:**
 shiftfs can prevent the use of overlayfs **inside a container**.      
 A usecase for this is running Docker with the overlayfs-storage driver **inside a lxd container**.   
-A Kernelpatch that solves this is available, but it's not included in the mainline kernel (yet).      
-To my knowledge only Ubuntu included it (see [solved bug report](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1846272)).      
+A Kernelpatch that solves this is available, but it's not included in the mainline kernel (yet).
+To my knowledge only Ubuntu included it (see [solved bug report](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1846272)).
 
-  For **workarounds and more information** see:   
-[Issue 2 of this repo](https://github.com/toby63/shiftfs-dkms/issues/2#issuecomment-614688392) 
+  For **workarounds and more information** see:
+[Issue 2 of this repo](https://github.com/toby63/shiftfs-dkms/issues/2#issuecomment-614688392)
 
 
 * More Issues may be found in the [Ubuntu Kernel Bug Tracker](https://bugs.launchpad.net/ubuntu/+source/linux?field.searchtext=shiftfs&search=Search&field.status%3Alist=NEW&field.status%3Alist=INCOMPLETE_WITH_RESPONSE&field.status%3Alist=INCOMPLETE_WITHOUT_RESPONSE&field.status%3Alist=CONFIRMED&field.status%3Alist=TRIAGED&field.status%3Alist=INPROGRESS&field.status%3Alist=FIXCOMMITTED&field.assignee=&field.bug_reporter=&field.omit_dupes=on&field.has_patch=&field.has_no_package=).
