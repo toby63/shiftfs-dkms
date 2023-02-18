@@ -34,7 +34,7 @@ See: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitat
 
 | Last Updated: |
 | --- |
-| March 2021 |
+| February 2023 (shiftfs from April 2021) |
 
 | Version: | Status: |
 | --- | --- | 
