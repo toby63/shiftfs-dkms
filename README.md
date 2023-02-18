@@ -1,5 +1,5 @@
 
-# shiftfs-dkms version for Kernels 5.18.x and 5.19.x
+# shiftfs-dkms version for Kernels 5.18.x
 
 Content:
 --------
@@ -38,7 +38,7 @@ See also the [README.md in master branch](https://github.com/toby63/shiftfs-dkms
 
 | Last Update: |
 | --- |
-| December 2022 |
+| February 2023 |
 
 
 | Version: | Status: |
