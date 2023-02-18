@@ -1,5 +1,5 @@
 
-# shiftfs-dkms version for Kernels 5.16.x and 5.15.x
+# shiftfs-dkms version for Kernels 5.15.x and 5.16.x
 
 Content:
 --------
@@ -17,7 +17,7 @@ Content:
 
 ## About
 
-**Note:** This version is compatible with Linux Kernel versions 5.16.x and 5.15.x .
+**Note:** This version is compatible with Linux Kernel versions 5.15.x and 5.16.x .
 
 The **shiftfs.c** file is from the Ubuntu Jammy kernel repo, see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=master-next)
 
@@ -36,7 +36,7 @@ See also: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#li
 
 | Last Update: |
 | --- |
-| January 2022 |
+| February 2023 |
 
 
 | Version: | Status: |
