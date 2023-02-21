@@ -19,7 +19,7 @@ Content:
 
 **Note:** This version is compatible with Linux Kernel versions 6.1.x.
 
-The **shiftfs.c** file is from the Ubuntu Lunar kernel repo (lowlatency-next branch), see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=lowlatency-next)
+The **shiftfs.c** file is from the Ubuntu Lunar kernel repo (master-next branch), see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=master-next)
 
 For an overview of shiftfs and more information see [README.md in master branch](https://github.com/toby63/shiftfs-dkms/blob/master/README.md).
 
@@ -34,9 +34,11 @@ For more known issues and limitations, see also the [README.md in master branch]
 
 ## Status
 
-| Last Update: |
-| --- |
-| February 2023 (shiftfs.c is from November 2022) |
+Last Update:
+
+|  Repo: | shiftfs.c (included here): |
+| --- | --- |
+| February 2023 | 2023-01-31 |
 
 
 | Version: | Status: |
@@ -68,7 +70,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 #### 2. (Optional, but recommended) Update shiftfs.c:
 
  The shiftfs.c included might be outdated, thus the update-script.
- You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=lowlatency-next)) whether an update is available.
+ You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=master-next)) whether an update is available.
 
  Run as user:
 
@@ -93,7 +95,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 
 ### Upgrade:
 
-**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=lowlatency-next) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
+**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=master-next) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
  
  * Uninstall/Remove the old version:
 

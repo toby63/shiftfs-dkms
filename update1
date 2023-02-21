@@ -7,8 +7,8 @@ normal_backup () {
     #rename and move old shiftfs.c
     mv shiftfs.c backup/shiftfs.c.old
     #download new shiftfs.c
-    wget https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/plain/fs/shiftfs.c?h=lowlatency-next
-    mv shiftfs.c?h=lowlatency-next shiftfs.c
+    wget https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/plain/fs/shiftfs.c?h=master-next
+    mv shiftfs.c?h=master-next shiftfs.c
     echo ' '
     echo 'Updated shiftfs.c'
     echo 'Moved old shiftfs.c into folder "backup".'
