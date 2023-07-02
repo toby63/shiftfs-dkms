@@ -17,6 +17,12 @@
 
 This repo provides scripts to install the (Linux) kernel module **shiftfs** via dkms.   
 
+### Status
+
+This Repository: | Upstream development: |
+--- | --- |
+inactive at the moment | active |
+
 ### About shiftfs
 
 shiftfs is a kernel filesystem for the Linux kernel.   
@@ -43,7 +49,9 @@ See **Overview of Branches/Versions** below for more information on each availab
 
 The new approach called "**idmapped mounts**" is natively included in recent Linux kernels (since kernel version **5.12**) - so there is no need for dkms-modules anymore.
 Support for the new approach is implemented since LXD version **4.16**, and the transition is seamless, so LXD will automatically switch to the new approach, if available and all commands/options stay the same.   
-**Note:** For now there are some limitations though, as only **ext4, xfs, vfat and btrfs** (since kernel version **5.15**) are supported as underlying filesystems for containers and volumes. **ZFS and cephfs** are planned to be supported in future kernels or seperately.   
+
+**Note:** For now there are some limitations though, as only **ext4, xfs, vfat and btrfs** (since kernel version **5.15**) are supported as underlying filesystems for containers and volumes. 
+**ZFS and cephfs** are planned to be supported in future kernels or seperately.   
 So if you use unsupported filesystems, I recommend to use the original shiftfs for now, until support for them is included in the new approach. 
 
 Sources:
@@ -97,11 +105,6 @@ To my knowledge only Ubuntu included it (see [solved bug report](https://bugs.la
 
 * More Issues may be found in the [Ubuntu Kernel Bug Tracker](https://bugs.launchpad.net/ubuntu/+source/linux?field.searchtext=shiftfs&search=Search&field.status%3Alist=NEW&field.status%3Alist=INCOMPLETE_WITH_RESPONSE&field.status%3Alist=INCOMPLETE_WITHOUT_RESPONSE&field.status%3Alist=CONFIRMED&field.status%3Alist=TRIAGED&field.status%3Alist=INPROGRESS&field.status%3Alist=FIXCOMMITTED&field.assignee=&field.bug_reporter=&field.omit_dupes=on&field.has_patch=&field.has_no_package=).
 
-## Status
-
-my Project/Repo: | Upstream development: |
---- | --- |
-active | active |
 
 If you want to post a testreport, take a look at: [Testreports Issue on Github](https://github.com/toby63/shiftfs-dkms/issues/3).
 
