@@ -1,5 +1,4 @@
-
-# shiftfs-dkms version for Kernels 6.1.x
+# shiftfs-dkms version for Kernels 6.1.x and 6.2.x
 
 Content:
 --------
@@ -17,7 +16,9 @@ Content:
 
 ## About
 
-**Note:** This version is compatible with Linux Kernel versions 6.1.x.
+**Note:** 
+- This version should compatible with Linux Kernel versions 6.1.x and 6.2.x
+- But the newest version it untested for now, the [commit for kernel 6.2](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/commit/fs/shiftfs.c?h=master-next&id=f9cf053b4ec48eeb438e26e75d847bad755765bf) might break supoort for 6.1, but it is not given. If it doesn't work, exclude that commit, e.g. with [git-revert](https://www.git-scm.com/docs/git-revert)
 
 The **shiftfs.c** file is from the Ubuntu Lunar kernel repo (master-next branch), see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=master-next)
 
@@ -38,7 +39,7 @@ Last Update:
 
 |  Repo: | shiftfs.c (included here): |
 | --- | --- |
-| February 2023 | 2023-01-31 |
+| July 2023 | 2023-01-31 |
 
 
 | Version: | Status: |
@@ -70,7 +71,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 #### 2. (Optional, but recommended) Update shiftfs.c:
 
  The shiftfs.c included might be outdated, thus the update-script.
- You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=master-next)) whether an update is available.
+ You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=master-next) whether an update is available.
 
  Run as user:
 
