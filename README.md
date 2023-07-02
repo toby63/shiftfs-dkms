@@ -17,8 +17,8 @@ Content:
 ## About
 
 **Note:** 
-- This version should compatible with Linux Kernel versions 6.1.x and 6.2.x
-- But the newest version it untested for now, the [commit for kernel 6.2](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/commit/fs/shiftfs.c?h=master-next&id=f9cf053b4ec48eeb438e26e75d847bad755765bf) might break supoort for 6.1, but it is not given. If it doesn't work, exclude that commit, e.g. with [git-revert](https://www.git-scm.com/docs/git-revert)
+- This version should be compatible with Linux Kernel versions 6.1.x and 6.2.x
+- But the newest version is untested for now, the [commit for kernel 6.2](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/commit/fs/shiftfs.c?h=master-next&id=f9cf053b4ec48eeb438e26e75d847bad755765bf) might break support for 6.1, but it is not given. If it doesn't work, exclude that commit, e.g. with [git-revert](https://www.git-scm.com/docs/git-revert)
 
 The **shiftfs.c** file is from the Ubuntu Lunar kernel repo (master-next branch), see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=master-next)
 
