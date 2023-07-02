@@ -72,7 +72,8 @@ Note: I only test the most recent branch regularly, all others are not regularly
 
 | Branch/Version: | For Kernel(version): | Further Notes: |
 | --- | --- | --- |
-| [k6.1](https://github.com/toby63/shiftfs-dkms/tree/k6.1) | 6.1.x | Does not work with 6.0.x. |
+| - | 6.3.x | I did not set up a branch yet, but you can try to replace the shiftfs.c file from k6.1 with [this one](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/mantic/tree/fs/shiftfs.c?h=master-next&id=94b75e19475892372aca91a67f71f51121e6f714). You also need to adjust **dkms.conf**. |
+| [k6.1](https://github.com/toby63/shiftfs-dkms/tree/k6.1) | 6.1.x and 6.2.x | Does not work with 6.0.x. Also take a look at the [Notes](https://github.com/toby63/shiftfs-dkms/blob/k6.1/README.md#about)! |
 | [k5.18](https://github.com/toby63/shiftfs-dkms/tree/k5.18) | 5.18.x, 5.19.x (and probably 6.0.x) | 5.19.x and 6.0.x are not tested. Kernel versions are deprecated upstream, see [kernel.org](https://www.kernel.org/). |
 | [k5.17](https://github.com/toby63/shiftfs-dkms/tree/k5.17) | 5.17.x | Kernel version is deprecated upstream, see [kernel.org](https://www.kernel.org/). |
 | [k5.16](https://github.com/toby63/shiftfs-dkms/tree/k5.16) | 5.15.x (longterm version) (and probably 5.16.x) | - |
