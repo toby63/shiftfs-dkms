@@ -65,7 +65,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 #### 2. (Optional, but recommended) Update shiftfs.c:
 
  The shiftfs.c included might be outdated, thus the update-script.   
- You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/groovy/log/fs/shiftfs.c) whether an update is available.
+ Check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/groovy/log/fs/shiftfs.c) whether an update is available.
 
  Run as user:
 
