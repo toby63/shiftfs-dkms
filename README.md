@@ -28,7 +28,7 @@ For an overview and more information see [README.md in master branch](https://gi
 
 ## Limitations
 
-See: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitations)
+See: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#known-issues)
 
 ## Status
 
