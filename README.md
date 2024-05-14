@@ -18,7 +18,7 @@ Content:
 
 **Note:** 
 - This version should be compatible with Linux Kernel versions 6.1.x and 6.2.x
-- But the newest version is untested for now, the [commit for kernel 6.2](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/commit/fs/shiftfs.c?h=master-next&id=f9cf053b4ec48eeb438e26e75d847bad755765bf) might break support for 6.1, but it is not given. If it doesn't work, exclude that commit, e.g. with [git-revert](https://www.git-scm.com/docs/git-revert)
+- But the newest version is untested for now, the [commit for kernel 6.2](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/commit/fs/shiftfs.c?h=master-next&id=f9cf053b4ec48eeb438e26e75d847bad755765bf) might break support for 6.1, but it is not given. If it doesn't work, exclude that commit, e.g. with [git-revert](https://www.git-scm.com/docs/git-revert).
 
 The **shiftfs.c** file is from the Ubuntu Lunar kernel repo (master-next branch), see: [git link](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=master-next)
 
@@ -31,7 +31,7 @@ used with filesystem namespaces.
 
 See: [commit](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/commit/fs/shiftfs.c?h=master-next&id=d347e71d2c0b4fc79891b00c47971f1ac5bd1ca8)
 
-For more known issues and limitations, see also the [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitations).
+For more known issues and limitations, see also the [README.md in master branch](https://github.com/toby63/shiftfs-dkms#known-issues).
 
 ## Status
 
@@ -96,7 +96,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 
 ### Upgrade:
 
-**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=master-next) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
+**Note:** Check for updates regularly in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/lunar/log/fs/shiftfs.c?h=master-next) for shiftfs and in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) for updates of this repo.
  
  * Uninstall/Remove the old version:
 
