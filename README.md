@@ -30,7 +30,7 @@ used with filesystem namespaces.
 
 See: [commit](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/commit/fs/shiftfs.c?h=master-next&id=d347e71d2c0b4fc79891b00c47971f1ac5bd1ca8)
 
-See also: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitations) for more limitations.
+See also: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#known-issues) for more limitations and known issues.
 
 ## Status
 
@@ -68,7 +68,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 #### 2. (Optional, but recommended) Update shiftfs.c:
 
  The shiftfs.c included might be outdated, thus the update-script.
- You can check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=hwe-5.17)) whether an update is available.
+ Check the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=hwe-5.17) whether an update is available.
 
  Run as user:
 
@@ -93,7 +93,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 
 ### Upgrade:
 
-**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=hwe-5.17) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
+**Note:** Check for updates regularly in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/jammy/log/fs/shiftfs.c?h=hwe-5.17) for shiftfs and in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) for updates of this repo.
  
  * Uninstall/Remove the old version:
 
