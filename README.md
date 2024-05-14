@@ -108,11 +108,9 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 
 ## Usecases
 
-* Incus: See Section "LXD" for now; simply replacing the "lxc" command with "incus" should work in most cases. I might add updated instructions in the future.
+* **Incus**: See my [GitHub wiki](https://github.com/toby63/shiftfs-dkms/wiki/Use-shift(fs)-in-Incus) and the [Linuxcontainers Forum - Share Folders and Volumes](https://discuss.linuxcontainers.org/t/share-folders-and-volumes-between-host-and-containers/7735)
 
-* LXD:
-
-  How to use shiftfs with LXD is described in [my wiki](https://github.com/toby63/shiftfs-dkms/wiki/Use-shiftfs-in-LXD)     
+* **LXD** (might be outdated): How to use shiftfs with LXD is described in [my wiki](https://github.com/toby63/shiftfs-dkms/wiki/Use-shiftfs-in-LXD)     
   and in the official Forum of LXD: [Usecases for shiftfs](https://discuss.linuxcontainers.org/t/lxd-usecases-of-shiftfs-volume-disk-share/7735) and [Trying out shiftfs](https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155).
 
 
