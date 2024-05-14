@@ -21,38 +21,38 @@ This repo provides scripts to install the (Linux) kernel module **shiftfs** via 
 
 This Repository: | Upstream development: |
 --- | --- |
-inactive at the moment | active |
+Mostly inactive at the moment | active |
 
 ### About shiftfs
 
 shiftfs is a kernel filesystem for the Linux kernel.   
-It provides easier uid/gid-shifting for containers and can be used for example with [LXD](https://linuxcontainers.org/lxd/) (see also: [Usecases](#usecases)).
+It provides easier uid/gid-shifting for containers and can be used for example with [Incus](https://linuxcontainers.org/incus/introduction/) and LXD (see also: [Usecases](#usecases)).
 
 shiftfs was made by:   
 See [Credits](#credits)
 
-* Further information on shiftfs can be found in the official LXD Forum:
+Further information on shiftfs can be found in the Ubuntu kernel repos (see **Overview of Branches/Versions** below for specific links) and in the official Linuxcontainers.org Forum (the following link might be outdated, it was the original announcement):
 https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155
 
 ### Important Info
 
-The official successor of shiftfs is available now, see details below.   
+The official successor of shiftfs is available now.
 
-The original shiftfs (the version used in this repo) is still available for:
+The new approach called "**idmapped mounts**" is natively included in recent Linux kernels (since kernel version **5.12**) - so there is no need for dkms-modules anymore. 
 
-- Newer kernel versions (the end of support is unknown for now, upstream will probably announce it someday (see also: [Issue 24](https://github.com/toby63/shiftfs-dkms/issues/24))), including: **6.1** and more
+Support for the new approach is implemented in Incus and LXD (since version **4.16**) and the transition is seamless, so Incus and LXD will automatically switch to the new approach, if available, and all commands/options stay the same.   
+**Update:** The following filesystems are now supported as underlying filesystems for containers and volumes: ext4, xfs, vfat, btrfs (since kernel version **5.15**), ZFS (recent kernels) and cephfs (recent kernels).
+
+So the only reason to still use shiftfs is if you use older kernels, or have other specific reasons.
+
+### Shiftfs (Alternative)
+
+If you still need to use shiftfs, then the original shiftfs (the version used in this repo) is still available for:
+
+- Newer kernel versions (the end of support is unknown for now, upstream will probably announce it someday (see also: [Issue 24](https://github.com/toby63/shiftfs-dkms/issues/24))), including: **6.1** and newer
 - Longterm kernel versions: **5.15**, **5.10** and **5.4**
 
 See **Overview of Branches/Versions** below for more information on each available version in this repo.   
-
-#### Details about the successor for shiftfs
-
-The new approach called "**idmapped mounts**" is natively included in recent Linux kernels (since kernel version **5.12**) - so there is no need for dkms-modules anymore.
-Support for the new approach is implemented since LXD version **4.16**, and the transition is seamless, so LXD will automatically switch to the new approach, if available and all commands/options stay the same.   
-
-**Note:** For now there are some limitations though, as only **ext4, xfs, vfat and btrfs** (since kernel version **5.15**) are supported as underlying filesystems for containers and volumes. 
-**ZFS and cephfs** are planned to be supported in future kernels or seperately.   
-So if you use unsupported filesystems, I recommend to use the original shiftfs for now, until support for them is included in the new approach. 
 
 Sources:
 
@@ -68,8 +68,6 @@ Sources:
 
 There are different versions of shiftfs.c for different kernel versions, so I cover a few of them:
 
-Note: I only test the most recent branch regularly, all others are not regularly tested.
-
 | Branch/Version: | For Kernel(version): | Further Notes: |
 | --- | --- | --- |
 | - | 6.3.x | I did not set up a branch yet, but you can try to replace the shiftfs.c file from k6.1 with [this one](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/mantic/tree/fs/shiftfs.c?h=master-next&id=94b75e19475892372aca91a67f71f51121e6f714). You also need to adjust **dkms.conf**. |
@@ -80,7 +78,6 @@ Note: I only test the most recent branch regularly, all others are not regularly
 | [k5.13](https://github.com/toby63/shiftfs-dkms/tree/k5.13) | 5.13.x (and probably 5.14.x) | Kernel versions are deprecated upstream, see [kernel.org](https://www.kernel.org/). |
 | [k5.10](https://github.com/toby63/shiftfs-dkms/tree/k5.10) | 5.10.x (longterm version) and 5.8.x | - |
 | [k5.4](https://github.com/toby63/shiftfs-dkms/tree/k5.4) | 5.4 (longterm version) | - |
-| [Arch Linux Packages in AUR](https://aur.archlinux.org/packages/?O=0&K=shiftfs) | for packages "linux" and "linux-lts" | see the AUR pages for more details. |
 
 #### What about other kernel versions?
 
@@ -111,6 +108,8 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 
 ## Usecases
 
+* Incus: See Section "LXD" for now; simply replacing the "lxc" command with "incus" should work in most cases. I might add updated instructions in the future.
+
 * LXD:
 
   How to use shiftfs with LXD is described in [my wiki](https://github.com/toby63/shiftfs-dkms/wiki/Use-shiftfs-in-LXD)     
@@ -119,7 +118,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
 
 ## Report bugs
 
- Report bugs at:
+ Report bugs first at:
  https://github.com/toby63/shiftfs-dkms/issues
 
 
