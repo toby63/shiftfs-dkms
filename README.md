@@ -28,7 +28,7 @@ For an overview and more information see [README.md in master branch](https://gi
 
 ## Limitations
 
-See: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#limitations)
+See: [README.md in master branch](https://github.com/toby63/shiftfs-dkms#known-issues)
 
 ## Status
 
@@ -90,7 +90,7 @@ If you want to post a testreport, take a look at: [Testreports Issue on Github](
        
 ### Upgrade:
 
-**Note:** Check for updates regularly either in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/groovy/log/fs/shiftfs.c) or in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) of this repo.
+**Note:** Check for updates regularly in the [upstream log](https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/groovy/log/fs/shiftfs.c) for shiftfs and in the [Update log issue](https://github.com/toby63/shiftfs-dkms/issues/12) for updates of this repo.
  
  * Uninstall/Remove the old version:
 
