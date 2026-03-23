@@ -15,13 +15,15 @@
 
 ## About
 
-This repo provides scripts to install the (Linux) kernel module **shiftfs** via dkms.   
+This repo provided scripts to install the (Linux) kernel module **shiftfs** via dkms.   
+
+**Note:** This repo is inactive and did not receive updates in recent time, so use it at your own risk.
 
 ### Status
 
 This Repository: | Upstream development: |
 --- | --- |
-Mostly inactive at the moment | active |
+Inactive | Unknown |
 
 ### About shiftfs
 
